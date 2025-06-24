@@ -1,0 +1,781 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #201912;
+  color: white;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #6e8c5f;
+  padding: 10px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 24px;
+  margin-right: 8px;
+}
+
+.logo span {
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.search-box {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 300px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Menu lateral */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100%;
+  background-color: #3c5533;
+  transition: right 0.3s ease;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+.side-menu .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu li {
+  padding: 20px;
+  color: white;
+  font-family: 'Caveat', cursive;
+  font-size: 22px;
+}
+
+/* Slideshow */
+.slideshow {
+  position: relative;
+  height: 360px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 2s ease;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+.overlay {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  right: 5%;
+  color: white;
+}
+
+.overlay h2 {
+  font-size: 26px;
+  margin: 0;
+}
+
+.overlay .verde {
+  color: #a2cb8d;
+}
+
+.overlay p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.saiba-mais {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 20px;
+  color: white;
+  text-decoration: underline;
+}
+
+/* Dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.carousel-dots span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-dots .active {
+  background: #fff;
+}
+
+/* Conteúdo */
+.conteudo {
+  background-color: #201912;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.texto {
+  flex: 1 1 60%;
+  min-width: 300px;
+}
+
+.texto h2 {
+  margin-top: 0;
+}
+
+.card {
+  background-color: #3b3b3b;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 200px;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-title {
+  background: #6e8c5f;
+  padding: 8px;
+  color: white;
+  font-weight: bold;
+}
+
+.card p {
+  padding: 8px;
+  color: #ccc;
+}
+
+.mais-btn {
+  background: #6e8c5f;
+  color: white;
+  font-size: 24px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+/* Rodapé */
+footer {
+  background: #110a01;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-col h3 {
+  margin-bottom: 10px;
+}
+
+.footer-col ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.footer-col p {
+  color: #ccc;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 32px;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  user-select: none;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6e8c5f;
+  padding: 12px 20px;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 30px;
+}
+
+.search-container {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+  margin: 0 20px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px 35px 10px 15px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  background-color: #f0f0f0;
+  outline: none;
+}
+
+.search-container .lupa {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #555;
+  pointer-events: none;
+}
+
+.menu-toggle {
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+}
+/* Estilos para a página de notícias em cards */
+.noticias-container {
+  padding: 20px 0;
+}
+
+.titulo-pagina {
+  color: #a2cb8d;
+  margin-bottom: 25px;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.filtro-btn {
+  padding: 8px 16px;
+  background: #3b3b3b;
+  color: #ccc;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+
+.filtro-btn.active, .filtro-btn:hover {
+  background: #6e8c5f;
+  color: white;
+}
+
+.grid-noticias {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.noticia-card {
+  background: #3b3b3b;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.noticia-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.noticia-card.destaque {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-imagem {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.noticia-card.destaque .card-imagem {
+  height: auto;
+}
+
+.card-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+  filter: brightness(0.8);
+}
+
+.noticia-card:hover .card-imagem img {
+  transform: scale(1.05);
+}
+
+.categoria {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #6e8c5f;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card-conteudo {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.noticia-card h2 {
+  color: #a2cb8d;
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.noticia-card.destaque h2 {
+  font-size: 24px;
+}
+
+.card-resumo {
+  color: #ccc;
+  margin: 0 0 15px 0;
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.card-metadados {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  color: #999;
+}
+
+.card-metadados i {
+  margin-right: 5px;
+}
+
+.btn-leia-mais {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #6e8c5f;
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background 0.3s;
+  align-self: flex-start;
+}
+
+.btn-leia-mais:hover {
+  background: #5a724c;
+}
+
+.paginacao {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.pagina-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background: #3b3b3b;
+  color: #ccc;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pagina-btn.active, .pagina-btn:hover {
+  background: #6e8c5f;
+  color: white;
+}
+
+/* Newsletter no footer */
+.input-newsletter {
+  display: flex;
+  margin-top: 10px;
+}
+
+.input-newsletter input {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  background: #3b3b3b;
+  color: white;
+}
+
+.input-newsletter button {
+  padding: 0 12px;
+  background: #6e8c5f;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .noticia-card.destaque {
+      grid-template-columns: 1fr;
+  }
+  
+  .grid-noticias {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .filtros {
+      justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-noticias {
+      grid-template-columns: 1fr;
+  }
+  
+  .noticia-card h2 {
+      font-size: 16px;
+  }
+  
+  .card-resumo {
+      font-size: 13px;
+  }
+}
+/* Estilos globais para links */
+a {
+  color: white !important;
+  text-decoration: none;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+a:hover {
+  color: white !important;
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: white !important;
+}
+
+a:active {
+  color: white !important;
+}
+
+/* Links específicos que devem manter o estilo original */
+.btn-leia-mais, 
+.filtro-btn, 
+.pagina-btn, 
+.input-newsletter button {
+  color: initial !important;
+}
+
+.btn-leia-mais:hover, 
+.filtro-btn:hover, 
+.pagina-btn:hover, 
+.input-newsletter button:hover {
+  color: white !important;
+  opacity: 1;
+}
+
+/* Links no menu lateral */
+.side-menu a {
+  color: white !important;
+  text-decoration: none;
+}
+
+.side-menu a:hover {
+  color: #a2cb8d !important;
+  text-decoration: none;
+}
+
+/* Links no footer */
+.footer-col a {
+  color: #ccc !important;
+}
+
+.footer-col a:hover {
+  color: white !important;
+  text-decoration: underline;
+}
+/* Ajustes para os filtros */
+.filtro-btn {
+  color: #ccc !important;
+  text-decoration: none !important;
+}
+
+.filtro-btn.active, .filtro-btn:hover {
+  color: white !important;
+}
+
+/* Ajustes para a paginação */
+.pagina-btn {
+  color: #ccc !important;
+  text-decoration: none !important;
+}
+
+.pagina-btn.active, .pagina-btn:hover {
+  color: white !important;
+}
+/* Garante que os links permaneçam brancos */
+body a,
+body a:link,
+body a:visited,
+body a:hover,
+body a:active,
+body a:focus {
+    color: white !important;
+}
+/* Estilos para a página de ONGs */
+.ongs-container {
+  padding: 30px 0;
+}
+
+.titulo-centralizado {
+  text-align: center;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.titulo-centralizado::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #a2cb8d;
+  margin: 10px auto 0;
+}
+
+.subtitulo-centralizado {
+  text-align: center;
+  color: #ccc;
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+.grid-ongs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.ong-card {
+  background: #3b3b3b;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #6e8c5f;
+}
+
+.ong-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.ong-imagem {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #2a2a2a;
+}
+
+.ong-imagem img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.ong-conteudo {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ong-card h2 {
+  color: #a2cb8d;
+  margin: 0 0 15px 0;
+  font-size: 20px;
+}
+
+.ong-descricao {
+  color: #ccc;
+  margin: 0 0 15px 0;
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.ong-local {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #999;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.btn-visitar-site {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #6e8c5f;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background 0.3s;
+  text-align: center;
+  justify-content: center;
+}
+
+.btn-visitar-site:hover {
+  background: #5a724c;
+}
+
+.btn-contato {
+  display: inline-block;
+  background: #6e8c5f;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .grid-ongs {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .ong-card h2 {
+      font-size: 18px;
+  }
+  
+  .ong-descricao {
+      font-size: 13px;
+  }
+}

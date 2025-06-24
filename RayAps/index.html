@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoVital</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html" id="index" ><img src="img/logo.png" alt="Logo" class="thumbnails" /></a>
+    </div>
+
+    
+    <div class="search-container">
+      <input type="text" placeholder="Buscar..." />
+    </div>
+    
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+  </header>
+
+  <nav class="side-menu" id="side-menu">
+    <div class="close-btn" id="close-btn">×</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="noticias.html">Notícias</a></li>
+      <li><a href="ongs.html">ONGS parceiras</a></li>
+  </ul>
+
+  </nav>
+
+  <section class="slideshow">
+    <div class="slides" id="slides">
+      <div class="slide">
+        <img src="img/tengolengo.png" alt="Slide 1" />
+        <div class="overlay">
+          <h2><span class="verde">A Terra</span> está pedindo socorro.</h2>
+          <p>Descubra como ajudar</p>
+          <a href="#" class="saiba-mais">Saiba Mais</a>
+        </div>
+      </div>
+      <div class="slide"><img src="img/desmata.png.jpg" alt="Slide 2" /></div>
+      <div class="slide"><img src="img/queimadas.png" alt="Slide 3" /></div>
+      <div class="slide"><img src="img/arvore.png" alt="Slide 4" /></div>
+      <div class="slide"><img src="img/canoas.png" alt="Slide 5" /></div>
+    </div>
+    
+    <div class="arrow left" onclick="moveSlide(-1)">&#10094;</div>
+    <div class="arrow right" onclick="moveSlide(1)">&#10095;</div>
+  
+    <div class="carousel-dots" id="carousel-dots"></div>
+  </section>
+
+  <section class="conteudo">
+    <div class="texto">
+      <h2>A Importância da Natureza</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus mi vel leo accumsan...</p>
+      <p>Phasellus ac ex sit amet nisl fringilla dapibus. Praesent in scelerisque nisl...</p>
+    </div>
+
+    <div class="card">
+      <img src="img/img4.png" alt="Fauna" />
+      <div class="card-title">Fauna</div>
+      <p>Descubra mais sobre a vida que nos cerca</p>
+    </div>
+
+    <div class="card">
+      <img src="img/img5.png" alt="Flora" />
+      <div class="card-title">Flora</div>
+      <p>Saiba mais sobre o verde que nos encobre</p>
+    </div>
+
+    <button class="mais-btn">+</button>
+  </section>
+
+  <footer>
+    <div class="footer-col">
+        <h3>Sobre Nós</h3>
+        <p>O portal de notícias confiáveis, trazendo informações atualizadas sobre natureza e acontecimentos relacionados globalmente.</p>
+    </div>
+    
+    <div class="footer-col">
+        <h3>Categorias</h3>
+        <ul>
+            <li><a href="#">Natureza</a></li>
+            <li><a href="#">Novas ONGS</a></li>
+            <li><a href="#">Recentes</a></li>
+            <li><a href="#">Salve o planeta</a></li>
+        </ul>
+    </div>
+    
+    <div class="footer-col">
+        <h3>Contato</h3>
+        <p><i class="fas fa-envelope"></i> APSUnipLKJM@gmail.com</p>
+        <p><i class="fas fa-phone"></i> (12) 3456-7890</p>
+    </div>
+    
+    <div class="footer-col">
+        <p class="newsletter">Assine nossa newsletter:</p>
+        <div class="input-newsletter">
+            <input type="email" placeholder="Seu e-mail">
+            <button><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

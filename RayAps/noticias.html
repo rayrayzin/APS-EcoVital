@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>EcoVital</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      </head>
+      <body>
+      
+        <header class="navbar">
+            <div class="logo">
+                <a href="index.html" id="index" ><img src="img/logo.png" alt="Logo" class="thumbnails" /></a>
+              </div>
+          
+          <div class="search-container">
+            <input type="text" placeholder="Buscar..." />
+          </div>
+          
+          <div class="menu-toggle" id="menu-toggle">☰</div>
+        </header>
+      
+        <nav class="side-menu" id="side-menu">
+          <div class="close-btn" id="close-btn">×</div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="noticias.html">Notícias</a></li>
+            <li><a href="ongs.html">ONGS parceiras</a></li>
+        </ul>
+      
+        </nav>
+      
+        <section class="slideshow">
+          <div class="slides" id="slides">
+            <div class="slide">
+              <img src="img/tengolengo.png" alt="Slide 1" />
+              <div class="overlay">
+                <h2><span class="verde">A Terra</span> está pedindo socorro.</h2>
+                <p>Descubra como ajudar</p>
+                <a href="#" class="saiba-mais">Saiba Mais</a>
+              </div>
+            </div>
+            <div class="slide"><img src="img/desmata.png.jpg" alt="Slide 2" /></div>
+            <div class="slide"><img src="img/queimadas.png" alt="Slide 3" /></div>
+            <div class="slide"><img src="img/arvore.png" alt="Slide 4" /></div>
+            <div class="slide"><img src="img/canoas.png" alt="Slide 5" /></div>
+          </div>
+          
+          <div class="arrow left" onclick="moveSlide(-1)">&#10094;</div>
+          <div class="arrow right" onclick="moveSlide(1)">&#10095;</div>
+        
+          <div class="carousel-dots" id="carousel-dots"></div>
+        </section>
+      
+
+    <!-- Conteúdo principal em cards -->
+    <main class="container">
+        <section class="noticias-container">
+            <h1 class="titulo-pagina"><i class="fas fa-newspaper"></i> Últimas Notícias</h1>
+<div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')">Todas</button>
+    <button class="btn" onclick="filterSelection('natureza')">Natureza</button>
+    <button class="btn" onclick="filterSelection('queimadas')">Queimadas</button>
+    <button class="btn" onclick="filterSelection('desmatamento')">Desmatamento</button>
+    <button class="btn" onclick="filterSelection('animais')">Animais</button>
+</div>
+            
+            <div class="grid-noticias">
+                <!-- Card de Notícia 1 (Destaque) -->
+                <div class="noticia-card destaque">
+                    <div class="card-imagem">
+                        <img src="noticia-destaque.jpg" alt="Notícia em destaque">
+                        <span class="categoria">Política</span>
+                    </div>
+                    <div class="card-conteudo">
+                        <h2>Título da Notícia em Destaque</h2>
+                        <p class="card-resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl...</p>
+                        <div class="card-metadados">
+                            <span class="data"><i class="far fa-calendar-alt"></i> 15/05/2023</span>
+                            <span class="tempo-leitura"><i class="far fa-clock"></i> 3 min leitura</span>
+                        </div>
+                        <a href="#" class="btn-leia-mais">Leia mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Card de Notícia 2 -->
+                <div class="noticia-card">
+                    <div class="card-imagem">
+                        <img src="noticia2.jpg" alt="Imagem da notícia">
+                        <span class="categoria">Tecnologia</span>
+                    </div>
+                    <div class="card-conteudo">
+                        <h2>Novas tecnologias revolucionam o mercado</h2>
+                        <p class="card-resumo">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque...</p>
+                        <div class="card-metadados">
+                            <span class="data"><i class="far fa-calendar-alt"></i> 14/05/2023</span>
+                            <span class="tempo-leitura"><i class="far fa-clock"></i> 4 min leitura</span>
+                        </div>
+                        <a href="#" class="btn-leia-mais">Leia mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Card de Notícia 3 -->
+                <div class="noticia-card">
+                    <div class="card-imagem">
+                        <img src="noticia3.jpg" alt="Imagem da notícia">
+                        <span class="categoria">Economia</span>
+                    </div>
+                    <div class="card-conteudo">
+                        <h2>Mercado financeiro tem alta histórica</h2>
+                        <p class="card-resumo">Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit...</p>
+                        <div class="card-metadados">
+                            <span class="data"><i class="far fa-calendar-alt"></i> 13/05/2023</span>
+                            <span class="tempo-leitura"><i class="far fa-clock"></i> 5 min leitura</span>
+                        </div>
+                        <a href="#" class="btn-leia-mais">Leia mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Card de Notícia 4 -->
+                <div class="noticia-card">
+                    <div class="card-imagem">
+                        <img src="noticia4.jpg" alt="Imagem da notícia">
+                        <span class="categoria">Esportes</span>
+                    </div>
+                    <div class="card-conteudo">
+                        <h2>Time local vence campeonato nacional</h2>
+                        <p class="card-resumo">Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl...</p>
+                        <div class="card-metadados">
+                            <span class="data"><i class="far fa-calendar-alt"></i> 12/05/2023</span>
+                            <span class="tempo-leitura"><i class="far fa-clock"></i> 2 min leitura</span>
+                        </div>
+                        <a href="#" class="btn-leia-mais">Leia mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Card de Notícia 5 -->
+                <div class="noticia-card">
+                    <div class="card-imagem">
+                        <img src="noticia5.jpg" alt="Imagem da notícia">
+                        <span class="categoria">Política</span>
+                    </div>
+                    <div class="card-conteudo">
+                        <h2>Novas leis aprovadas no congresso</h2>
+                        <p class="card-resumo">Consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl...</p>
+                        <div class="card-metadados">
+                            <span class="data"><i class="far fa-calendar-alt"></i> 11/05/2023</span>
+                            <span class="tempo-leitura"><i class="far fa-clock"></i> 6 min leitura</span>
+                        </div>
+                        <a href="#" class="btn-leia-mais">Leia mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Card de Notícia 6 -->
+                <div class="noticia-card">
+                    <div class="card-imagem">
+                        <img src="noticia6.jpg" alt="Imagem da notícia">
+                        <span class="categoria">Tecnologia</span>
+                    </div>
+                    <div class="card-conteudo">
+                        <h2>Lançamento do novo smartphone revolucionário</h2>
+                        <p class="card-resumo">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque...</p>
+                        <div class="card-metadados">
+                            <span class="data"><i class="far fa-calendar-alt"></i> 10/05/2023</span>
+                            <span class="tempo-leitura"><i class="far fa-clock"></i> 3 min leitura</span>
+                        </div>
+                        <a href="#" class="btn-leia-mais">Leia mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="paginacao">
+                <button class="pagina-btn active">1</button>
+                <button class="pagina-btn">2</button>
+                <button class="pagina-btn">3</button>
+                <button class="pagina-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-col">
+            <h3>Sobre Nós</h3>
+            <p>O portal de notícias confiáveis, trazendo informações atualizadas sobre natureza e acontecimentos relacionados globalmente.</p>
+        </div>
+        
+        <div class="footer-col">
+            <h3>Categorias</h3>
+            <ul>
+                <li><a href="#">Natureza</a></li>
+                <li><a href="#">Novas ONGS</a></li>
+                <li><a href="#">Recentes</a></li>
+                <li><a href="#">Salve o planeta</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-col">
+            <h3>Contato</h3>
+            <p><i class="fas fa-envelope"></i> APSUnipLKJM@gmail.com</p>
+            <p><i class="fas fa-phone"></i> (12) 3456-7890</p>
+        </div>
+        
+        <div class="footer-col">
+            <p class="newsletter">Assine nossa newsletter:</p>
+            <div class="input-newsletter">
+                <input type="email" placeholder="Seu e-mail">
+                <button><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </footer>
+    
+      <script src="script.js"></script>
+    </body>
+    </html>

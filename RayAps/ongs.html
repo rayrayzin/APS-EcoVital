@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONGs Ambientais - Meu Site</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html" id="index" ><img src="img/logo.png" alt="Logo" class="thumbnails" /></a>
+          </div>
+      
+        
+        <div class="search-container">
+          <input type="text" placeholder="Buscar..." />
+        </div>
+        
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+      </header>
+    
+      <nav class="side-menu" id="side-menu">
+        <div class="close-btn" id="close-btn">×</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="ongs.html">ONGS parceiras</a></li>
+      </ul>
+    
+      </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="conteudo-pagina">
+        <section class="ongs-container">
+          <div class="titulo-centralizado">
+            <div class="bg-marrom"></div>
+            <h1 class="titulo-pagina"><i class="fas fa-leaf"></i> ONGs Ambientais</h1>
+            <p class="subtitulo">Conheça organizações que trabalham pela preservação da natureza</p>
+            
+            <div class="grid-ongs">
+                <div class="ong-card">
+                    <div class="ong-imagem">
+                        <img src="IMg/wwfLogo.png" alt="WWF">
+                    </div>
+                    <div class="ong-conteudo">
+                        <h2>WWF Brasil</h2>
+                        <p class="ong-descricao">Trabalha pela conservação da biodiversidade e promoção do uso sustentável dos recursos naturais.</p>
+                        <div class="ong-local">
+                            <i class="fas fa-globe-americas"></i> Atuação Global
+                        </div>
+                        <a href="https://www.wwf.org.br" target="_blank" class="btn-visitar-site">
+                            Visitar Site <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Card 2 - SOS Mata Atlântica -->
+                <div class="ong-card">
+                    <div class="ong-imagem">
+                        <img src="img/logo-sosma.png" alt="SOS Mata Atlântica">
+                    </div>
+                    <div class="ong-conteudo">
+                        <h2>SOS Mata Atlântica</h2>
+                        <p class="ong-descricao">Defende a floresta mais ameaçada do Brasil desde 1986.</p>
+                        <div class="ong-local">
+                            <i class="fas fa-tree"></i> Mata Atlântica
+                        </div>
+                        <a href="https://www.sosma.org.br" target="_blank" class="btn-visitar-site">
+                            Visitar Site <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Card 3 - Greenpeace -->
+                <div class="ong-card">
+                    <div class="ong-imagem">
+                        <img src="img/gp-logo,png.svg" alt="Greenpeace">
+                    </div>
+                    <div class="ong-conteudo">
+                        <h2>Greenpeace Brasil</h2>
+                        <p class="ong-descricao">Atua contra as mudanças climáticas e pela proteção das florestas.</p>
+                        <div class="ong-local">
+                            <i class="fas fa-globe"></i> Atuação Global
+                        </div>
+                        <a href="https://www.greenpeace.org/brasil" target="_blank" class="btn-visitar-site">
+                            Visitar Site <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Card 4 - Instituto Terra -->
+                <div class="ong-card">
+                    <div class="ong-imagem">
+                        <img src="img/terra.png" alt="Instituto Terra">
+                    </div>
+                    <div class="ong-conteudo">
+                        <h2>Instituto Terra</h2>
+                        <p class="ong-descricao">Fundado por Sebastião Salgado, recupera ecossistemas degradados.</p>
+                        <div class="ong-local">
+                            <i class="fas fa-mountain"></i> Minas Gerais
+                        </div>
+                        <a href="https://institutoterra.org" target="_blank" class="btn-visitar-site">
+                            Visitar Site <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Card 5 - IPÊ -->
+                <div class="ong-card">
+                    <div class="ong-imagem">
+                        <img src="https://www.ipe.org.br/images/logo-ipe.png" alt="IPÊ">
+                    </div>
+                    <div class="ong-conteudo">
+                        <h2>IPÊ - Instituto de Pesquisas Ecológicas</h2>
+                        <p class="ong-descricao">Desenvolve projetos de conservação da biodiversidade e educação ambiental.</p>
+                        <div class="ong-local">
+                            <i class="fas fa-paw"></i> Diversos biomas
+                        </div>
+                        <a href="https://www.ipe.org.br" target="_blank" class="btn-visitar-site">
+                            Visitar Site <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Card 6 - Sea Shepherd -->
+                <div class="ong-card">
+                    <div class="ong-imagem">
+                        <img src="img/seaS.png" alt="Sea Shepherd">
+                    </div>
+                    <div class="ong-conteudo">
+                        <h2>Sea Shepherd Brasil</h2>
+                        <p class="ong-descricao">Protege a vida marinha através de ações diretas e campanhas.</p>
+                        <div class="ong-local">
+                            <i class="fas fa-water"></i> Oceanos
+                        </div>
+                        <a href="https://www.seashepherd.org.br" target="_blank" class="btn-visitar-site">
+                            Visitar Site <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-col">
+            <h3>Sobre Nós</h3>
+            <p>O portal de notícias confiáveis, trazendo informações atualizadas sobre natureza e acontecimentos relacionados globalmente.</p>
+        </div>
+        
+        <div class="footer-col">
+            <h3>Categorias</h3>
+            <ul>
+                <li><a href="#">Natureza</a></li>
+                <li><a href="#">Novas ONGS</a></li>
+                <li><a href="#">Recentes</a></li>
+                <li><a href="#">Salve o planeta</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-col">
+            <h3>Contato</h3>
+            <p><i class="fas fa-envelope"></i> APSUnipLKJM@gmail.com</p>
+            <p><i class="fas fa-phone"></i> (12) 3456-7890</p>
+        </div>
+        
+        <div class="footer-col">
+            <p class="newsletter">Assine nossa newsletter:</p>
+            <div class="input-newsletter">
+                <input type="email" placeholder="Seu e-mail">
+                <button><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </footer>
+    
+      <script src="script.js"></script>
+    </body>
+    </html>
+    
